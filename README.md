@@ -1,5 +1,5 @@
 # DevOps-notes
-**DevOps** =bridge in between development in operation
+**DevOps** =bridge in between development in operation <br>
 **Tools:** Git&GitHub (version tools and kit)
        terraform(infra create)
        ansible(configuration)
