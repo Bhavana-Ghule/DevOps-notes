@@ -1,4 +1,4 @@
-DevOps =bridge in between development in operation
+<h1>DevOps</h1> =bridge in between development in operation
 tools: Git&GitHub (version tools and kit), terraform(infra create), ansible(configuration),docker,  k8s, Jenkins(CI/CD pipeline),Prometheus(monitor ci/cd pipeline), grafana(cheking logs
 
 What is Git ?
