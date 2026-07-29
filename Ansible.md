@@ -19,33 +19,49 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible -i /etc/ansible/hosts all -m ping<br>
 ansible all -m ping<br>
 ##### To control the worker node you need to create yaml playbook inside the masternode so you just to run the following command for execute the file 
 ansible-playbook playbook.yaml <br>
-ansible-playbook playbook.yaml <br?
+ansible-playbook playbook.yaml -vv <br>
 
 ----
 
 ## For installing docker on worker node 
 ---
-- name: Install Docker on Worker Nodes
-  hosts: workers
-  become: yes
+- name: Install Docker on Worker Nodes<br>
+  hosts: workers<br>
+  become: yes<br>
+  tasks:<br>
+    - name: Update apt packages<br>
+      apt:<br>
+        update_cache: yes<br>
+    - name: Install Docker<br>
+      apt:<br>
+        name: docker.io<br>
+        state: present<br>
+    - name: Start Docker Service<br>
+      service:<br>
+        name: docker<br>
+        state: started<br>
+    - name: Enable Docker Service<br>
+      service:<br>
+        name: docker<br>
+        enabled: yes<br>
 
-  tasks:
+---
 
-    - name: Update apt packages
-      apt:
-        update_cache: yes
+##### Understanding Ansible Play Recap States:
+when an ansible playbook finished execution, it displays a summary called PLAY RECAP.<br>
+Example: <br>
+172.31.12.169 : ok-2 changed-1 unreachable-0 failed-0 skipped-0 rescued-0 ignored-0 <br>
+This summary helps to find out what happened during playbook execution.
 
-    - name: Install Docker
-      apt:
-        name: docker.io
-        state: present
+### States:
+1. ok = Give task executed successfully
+2. changed =Task modified the server
+3. unreachable =no. of server was reachable
+4. failed = no. of task failed
+5. skipped = no. of task was skipped
+6. rescued = no. of task was recovered
+7. ignored = no. of errors were ignored
 
-    - name: Start Docker Service
-      service:
-        name: docker
-        state: started
-
-    - name: Enable Docker Service
-      service:
-        name: docker
-        enabled: yes
+### Interview Questions:
+##### What is Ansible?
+It is an opensource automation and configuration management tool used for server provisioning, application deployment, and orchestration.
