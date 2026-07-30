@@ -65,3 +65,7 @@ This summary helps to find out what happened during playbook execution.
 ### Interview Questions:
 ##### What is Ansible?
 It is an opensource automation and configuration management tool used for server provisioning, application deployment, and orchestration.
+##### What is playbook?
+A playbook is YAML file that defines automation trcks to be executed on managed hosts.
+##### What is inventory?
+
