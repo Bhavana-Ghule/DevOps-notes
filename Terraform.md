@@ -125,5 +125,3 @@ terraform destroy -auto approved
 * Verify the instance in the AWS EC2 Console.
 
 ---
-
-These notes follow the same structure as your notebook but with corrected grammar and clearer wording.
