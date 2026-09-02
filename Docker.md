@@ -22,3 +22,10 @@ docker inspect newcontainer  <br>
    13  docker exec newcontainer /bin/bash  <br>
    14  ls <br>
    15  docker exec -it newcontainer /bin/bash <br>
+
+
+
+#### Dockerfile
+FROM nginx:latest
+
+COPY nginx.html /usr/share/nginx/html/index.html
