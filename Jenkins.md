@@ -86,3 +86,10 @@ pipeline {
 }
 ----
 4. after that build changes and look in server as well as docker hub you will find the docker image will install!!!
+
+### Adding Github WebHook:
+1. firstly make git hub token and make credentials on jenkins
+2. then you need to create an one projet repo whic consist the "Jenkinsfile" this named file inside that you can write the pipeline cod ewhat you want
+3. after that you need to go on that repo settings you will found the webhook option so select it and then continue where you need to enter the url so enter you jenkins server url with ending /github-webhook/ and select not declractive somthing option is there save the changes
+4. now come on the jenkins server create new pipeline job where you find some option choose "itHub hook trigger for GITScm polling" then in pieline defintion add "pipeline script fron scm" add there some detail of repo url name etc. and simply save
+5. after that build at only starting then you noot need to build it again it automatically triggered when changes occurs.
