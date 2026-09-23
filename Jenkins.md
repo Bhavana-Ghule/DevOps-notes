@@ -93,3 +93,25 @@ pipeline {
 3. after that you need to go on that repo settings you will found the webhook option so select it and then continue where you need to enter the url so enter you jenkins server url with ending /github-webhook/ and select not declractive somthing option is there save the changes
 4. now come on the jenkins server create new pipeline job where you find some option choose "itHub hook trigger for GITScm polling" then in pieline defintion add "pipeline script fron scm" add there some detail of repo url name etc. and simply save
 5. after that build at only starting then you noot need to build it again it automatically triggered when changes occurs.
+
+
+### Roles based authontication for jenkins user:
+Role-Based Authorization in Jenkins is a security mechanism that allows us to create different roles, assign permissions to those roles, and then assign users to the appropriate roles. For example, an Admin can manage Jenkins, a Developer can build jobs, and a Viewer can only view jobs. This follows the principle of least privilege and improves Jenkins security. <br>
+## authentication and authorization:
+authentication= who are you it means it requred the username and password to authenticate and it define who are you exactly.<br>
+authorization = what role you allowed to do , it mean which permission do you have for task<br>
+# steps to create user:
+1. Go to:
+---
+Jenkins
+   ↓
+Manage Jenkins
+   ↓
+Users
+   ↓
+Create User
+---
+2. fill the deatils and click on create user
+3. after that create roles for the ysers
+# Install Role-Based Authorization Strategy:
+Go to Jenkins → Manage Jenkins → Plugins → Available plugins → install Role-based Authorization Strategy → Manage Jenkins → Security → Authorization → select Role-Based Strategy → Save → Manage Jenkins → Manage and Assign Roles → Manage Roles → create roles and assign permissions → Assign Roles → add users to the required roles.
