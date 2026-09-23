@@ -97,10 +97,10 @@ pipeline {
 
 ### Roles based authontication for jenkins user:
 Role-Based Authorization in Jenkins is a security mechanism that allows us to create different roles, assign permissions to those roles, and then assign users to the appropriate roles. For example, an Admin can manage Jenkins, a Developer can build jobs, and a Viewer can only view jobs. This follows the principle of least privilege and improves Jenkins security. <br>
-## authentication and authorization:
+#### authentication and authorization:
 authentication= who are you it means it requred the username and password to authenticate and it define who are you exactly.<br>
 authorization = what role you allowed to do , it mean which permission do you have for task<br>
-# steps to create user:
+##### steps to create user:
 1. Go to:
 ---
 Jenkins
@@ -113,5 +113,5 @@ Create User
 ---
 2. fill the deatils and click on create user
 3. after that create roles for the ysers
-# Install Role-Based Authorization Strategy:
+#### Install Role-Based Authorization Strategy:
 Go to Jenkins → Manage Jenkins → Plugins → Available plugins → install Role-based Authorization Strategy → Manage Jenkins → Security → Authorization → select Role-Based Strategy → Save → Manage Jenkins → Manage and Assign Roles → Manage Roles → create roles and assign permissions → Assign Roles → add users to the required roles.
